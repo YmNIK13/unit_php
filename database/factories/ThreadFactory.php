@@ -21,6 +21,8 @@ class ThreadFactory extends Factory
     {
         if (User::count() < 10) {
             User::factory()->count(20)->create();
+
+            \App\Models\Thread::factory()->count(50)->create();
         }
 
         return [
